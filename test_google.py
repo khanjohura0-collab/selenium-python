@@ -12,4 +12,4 @@ def driver():
 def test_google(driver):
     driver.get("https://www.selenium.dev")
     driver.find_element("link text", "Downloads").click()
-    print(driver.title)
+    assert "Downloads" in driver.title
